@@ -18,7 +18,6 @@ for audio_path in audio_directory:
     audio_path_list.append(os.path.join("en_test_0", audio_path))
 
 
-# print(query("record2.webm"))
 
 
 
