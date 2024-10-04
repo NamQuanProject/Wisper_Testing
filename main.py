@@ -2,15 +2,9 @@ import requests
 import os
 from tqdm import tqdm
 import pandas as pd
+from test import query
 
-API_URL = "https://api-inference.huggingface.co/models/openai/whisper-base"
-headers = {"Authorization": "Bearer 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"}
 
-def query(filename):
-    with open(filename, "rb") as f:
-        data = f.read()
-    response = requests.post(API_URL, headers=headers, data=data)
-    return response.json()
 
 audio_directory = os.listdir(os.path.join("en_test_0"))
 audio_path_list = []
