@@ -11,5 +11,3 @@ def query(filename):
     response = requests.post(API_URL, headers=headers, data=data)
     return response.json()
 
-path = "Errors_Example/coffee_shop_noise.webm"
-print(query(path))

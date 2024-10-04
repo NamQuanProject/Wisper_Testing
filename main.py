@@ -23,11 +23,11 @@ label = {audio_path : sentence for audio_path, sentence in zip(path, sentences)}
 
 transcriptions = []
 
-for path in tqdm(audio_path_list[131:161]):
+for path in tqdm(audio_path_list[171:200]):
     ans = query(path)["text"]
     transcriptions.append({"prediction": ans, "path": path, "correct_label": label[path]})
 
 
 another_df = pd.DataFrame(transcriptions)
 
-another_df.to_csv("transcriptions4.tsv", sep='\t', index=False)
+another_df.to_csv("transcriptions5.tsv", sep='\t', index=False)
